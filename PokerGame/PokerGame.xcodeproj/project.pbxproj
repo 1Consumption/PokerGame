@@ -13,7 +13,19 @@
 		A532A378259DBF0100EAF4A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A532A376259DBF0100EAF4A5 /* Main.storyboard */; };
 		A532A37A259DBF0300EAF4A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A532A379259DBF0300EAF4A5 /* Assets.xcassets */; };
 		A532A37D259DBF0300EAF4A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A532A37B259DBF0300EAF4A5 /* LaunchScreen.storyboard */; };
+		A532A38C259DC29500EAF4A5 /* CardMetaDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A38B259DC29500EAF4A5 /* CardMetaDataTests.swift */; };
+		A532A397259DC2C700EAF4A5 /* CardMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A396259DC2C700EAF4A5 /* CardMetaData.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A532A38E259DC29500EAF4A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A532A365259DBF0100EAF4A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A532A36C259DBF0100EAF4A5;
+			remoteInfo = PokerGame;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A532A36D259DBF0100EAF4A5 /* PokerGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +36,21 @@
 		A532A379259DBF0300EAF4A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A532A37C259DBF0300EAF4A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A532A37E259DBF0300EAF4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A532A389259DC29500EAF4A5 /* PokerGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A532A38B259DC29500EAF4A5 /* CardMetaDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMetaDataTests.swift; sourceTree = "<group>"; };
+		A532A38D259DC29500EAF4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A532A396259DC2C700EAF4A5 /* CardMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMetaData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A532A36A259DBF0100EAF4A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A532A386259DC29500EAF4A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				A532A36F259DBF0100EAF4A5 /* PokerGame */,
+				A532A38A259DC29500EAF4A5 /* PokerGameTests */,
 				A532A36E259DBF0100EAF4A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				A532A36D259DBF0100EAF4A5 /* PokerGame.app */,
+				A532A389259DC29500EAF4A5 /* PokerGameTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +81,7 @@
 		A532A36F259DBF0100EAF4A5 /* PokerGame */ = {
 			isa = PBXGroup;
 			children = (
+				A532A395259DC2C100EAF4A5 /* Model */,
 				A532A370259DBF0100EAF4A5 /* AppDelegate.swift */,
 				A532A372259DBF0100EAF4A5 /* SceneDelegate.swift */,
 				A532A374259DBF0100EAF4A5 /* ViewController.swift */,
@@ -65,6 +91,23 @@
 				A532A37E259DBF0300EAF4A5 /* Info.plist */,
 			);
 			path = PokerGame;
+			sourceTree = "<group>";
+		};
+		A532A38A259DC29500EAF4A5 /* PokerGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				A532A38B259DC29500EAF4A5 /* CardMetaDataTests.swift */,
+				A532A38D259DC29500EAF4A5 /* Info.plist */,
+			);
+			path = PokerGameTests;
+			sourceTree = "<group>";
+		};
+		A532A395259DC2C100EAF4A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A532A396259DC2C700EAF4A5 /* CardMetaData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +130,24 @@
 			productReference = A532A36D259DBF0100EAF4A5 /* PokerGame.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A532A388259DC29500EAF4A5 /* PokerGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A532A390259DC29500EAF4A5 /* Build configuration list for PBXNativeTarget "PokerGameTests" */;
+			buildPhases = (
+				A532A385259DC29500EAF4A5 /* Sources */,
+				A532A386259DC29500EAF4A5 /* Frameworks */,
+				A532A387259DC29500EAF4A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A532A38F259DC29500EAF4A5 /* PBXTargetDependency */,
+			);
+			name = PokerGameTests;
+			productName = PokerGameTests;
+			productReference = A532A389259DC29500EAF4A5 /* PokerGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +159,10 @@
 				TargetAttributes = {
 					A532A36C259DBF0100EAF4A5 = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					A532A388259DC29500EAF4A5 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = A532A36C259DBF0100EAF4A5;
 					};
 				};
 			};
@@ -115,6 +180,7 @@
 			projectRoot = "";
 			targets = (
 				A532A36C259DBF0100EAF4A5 /* PokerGame */,
+				A532A388259DC29500EAF4A5 /* PokerGameTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +196,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A532A387259DC29500EAF4A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,10 +213,27 @@
 				A532A375259DBF0100EAF4A5 /* ViewController.swift in Sources */,
 				A532A371259DBF0100EAF4A5 /* AppDelegate.swift in Sources */,
 				A532A373259DBF0100EAF4A5 /* SceneDelegate.swift in Sources */,
+				A532A397259DC2C700EAF4A5 /* CardMetaData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A532A385259DC29500EAF4A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A532A38C259DC29500EAF4A5 /* CardMetaDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A532A38F259DC29500EAF4A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A532A36C259DBF0100EAF4A5 /* PokerGame */;
+			targetProxy = A532A38E259DC29500EAF4A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A532A376259DBF0100EAF4A5 /* Main.storyboard */ = {
@@ -319,6 +409,46 @@
 			};
 			name = Release;
 		};
+		A532A391259DC29500EAF4A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 735P3R8MUU;
+				INFOPLIST_FILE = PokerGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanseop.PokerGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokerGame.app/PokerGame";
+			};
+			name = Debug;
+		};
+		A532A392259DC29500EAF4A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 735P3R8MUU;
+				INFOPLIST_FILE = PokerGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanseop.PokerGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokerGame.app/PokerGame";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +466,15 @@
 			buildConfigurations = (
 				A532A382259DBF0300EAF4A5 /* Debug */,
 				A532A383259DBF0300EAF4A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A532A390259DC29500EAF4A5 /* Build configuration list for PBXNativeTarget "PokerGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A532A391259DC29500EAF4A5 /* Debug */,
+				A532A392259DC29500EAF4A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
