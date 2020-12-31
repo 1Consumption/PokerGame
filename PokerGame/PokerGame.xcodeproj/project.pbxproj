@@ -15,6 +15,9 @@
 		A532A37D259DBF0300EAF4A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A532A37B259DBF0300EAF4A5 /* LaunchScreen.storyboard */; };
 		A532A38C259DC29500EAF4A5 /* CardMetaDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A38B259DC29500EAF4A5 /* CardMetaDataTests.swift */; };
 		A532A397259DC2C700EAF4A5 /* CardMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A396259DC2C700EAF4A5 /* CardMetaData.swift */; };
+		A532A3A6259DDEFF00EAF4A5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A3A5259DDEFF00EAF4A5 /* Card.swift */; };
+		A532A3AB259DE0D300EAF4A5 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A3AA259DE0D300EAF4A5 /* CardDeck.swift */; };
+		A532A3B7259DE20300EAF4A5 /* CardDeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A3B6259DE20300EAF4A5 /* CardDeckTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		A532A38B259DC29500EAF4A5 /* CardMetaDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMetaDataTests.swift; sourceTree = "<group>"; };
 		A532A38D259DC29500EAF4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A532A396259DC2C700EAF4A5 /* CardMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMetaData.swift; sourceTree = "<group>"; };
+		A532A3A5259DDEFF00EAF4A5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		A532A3AA259DE0D300EAF4A5 /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
+		A532A3B6259DE20300EAF4A5 /* CardDeckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeckTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				A532A38B259DC29500EAF4A5 /* CardMetaDataTests.swift */,
+				A532A3B6259DE20300EAF4A5 /* CardDeckTests.swift */,
 				A532A38D259DC29500EAF4A5 /* Info.plist */,
 			);
 			path = PokerGameTests;
@@ -106,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				A532A396259DC2C700EAF4A5 /* CardMetaData.swift */,
+				A532A3A5259DDEFF00EAF4A5 /* Card.swift */,
+				A532A3AA259DE0D300EAF4A5 /* CardDeck.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,8 +219,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A532A3AB259DE0D300EAF4A5 /* CardDeck.swift in Sources */,
 				A532A375259DBF0100EAF4A5 /* ViewController.swift in Sources */,
 				A532A371259DBF0100EAF4A5 /* AppDelegate.swift in Sources */,
+				A532A3A6259DDEFF00EAF4A5 /* Card.swift in Sources */,
 				A532A373259DBF0100EAF4A5 /* SceneDelegate.swift in Sources */,
 				A532A397259DC2C700EAF4A5 /* CardMetaData.swift in Sources */,
 			);
@@ -221,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A532A3B7259DE20300EAF4A5 /* CardDeckTests.swift in Sources */,
 				A532A38C259DC29500EAF4A5 /* CardMetaDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
