@@ -8,10 +8,10 @@
 import Foundation
 
 struct Card: Hashable {
-    let suit: Suit
-    let rank: Rank
+    let suit: CardMetaData.Suit
+    let rank: CardMetaData.Rank
     
-    init(suit: Suit, rank: Rank) {
+    init(suit: CardMetaData.Suit, rank: CardMetaData.Rank) {
         self.suit = suit
         self.rank = rank
     }

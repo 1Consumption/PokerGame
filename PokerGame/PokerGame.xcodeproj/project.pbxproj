@@ -18,6 +18,10 @@
 		A532A3A6259DDEFF00EAF4A5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A3A5259DDEFF00EAF4A5 /* Card.swift */; };
 		A532A3AB259DE0D300EAF4A5 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A3AA259DE0D300EAF4A5 /* CardDeck.swift */; };
 		A532A3B7259DE20300EAF4A5 /* CardDeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A3B6259DE20300EAF4A5 /* CardDeckTests.swift */; };
+		A532A3BB259EF7A200EAF4A5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A3BA259EF7A200EAF4A5 /* Player.swift */; };
+		A532A3BF259EF7B700EAF4A5 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A3BE259EF7B700EAF4A5 /* PlayerTests.swift */; };
+		A532A3C3259EFA0D00EAF4A5 /* DealerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A3C2259EFA0D00EAF4A5 /* DealerTests.swift */; };
+		A532A3C7259EFBE900EAF4A5 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A3C6259EFBE900EAF4A5 /* Dealer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		A532A3A5259DDEFF00EAF4A5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A532A3AA259DE0D300EAF4A5 /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
 		A532A3B6259DE20300EAF4A5 /* CardDeckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeckTests.swift; sourceTree = "<group>"; };
+		A532A3BA259EF7A200EAF4A5 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		A532A3BE259EF7B700EAF4A5 /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
+		A532A3C2259EFA0D00EAF4A5 /* DealerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerTests.swift; sourceTree = "<group>"; };
+		A532A3C6259EFBE900EAF4A5 /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,8 @@
 				A532A38B259DC29500EAF4A5 /* CardMetaDataTests.swift */,
 				A532A3B6259DE20300EAF4A5 /* CardDeckTests.swift */,
 				A532A38D259DC29500EAF4A5 /* Info.plist */,
+				A532A3BE259EF7B700EAF4A5 /* PlayerTests.swift */,
+				A532A3C2259EFA0D00EAF4A5 /* DealerTests.swift */,
 			);
 			path = PokerGameTests;
 			sourceTree = "<group>";
@@ -115,6 +125,8 @@
 				A532A396259DC2C700EAF4A5 /* CardMetaData.swift */,
 				A532A3A5259DDEFF00EAF4A5 /* Card.swift */,
 				A532A3AA259DE0D300EAF4A5 /* CardDeck.swift */,
+				A532A3BA259EF7A200EAF4A5 /* Player.swift */,
+				A532A3C6259EFBE900EAF4A5 /* Dealer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +235,8 @@
 				A532A375259DBF0100EAF4A5 /* ViewController.swift in Sources */,
 				A532A371259DBF0100EAF4A5 /* AppDelegate.swift in Sources */,
 				A532A3A6259DDEFF00EAF4A5 /* Card.swift in Sources */,
+				A532A3C7259EFBE900EAF4A5 /* Dealer.swift in Sources */,
+				A532A3BB259EF7A200EAF4A5 /* Player.swift in Sources */,
 				A532A373259DBF0100EAF4A5 /* SceneDelegate.swift in Sources */,
 				A532A397259DC2C700EAF4A5 /* CardMetaData.swift in Sources */,
 			);
@@ -232,7 +246,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A532A3C3259EFA0D00EAF4A5 /* DealerTests.swift in Sources */,
 				A532A3B7259DE20300EAF4A5 /* CardDeckTests.swift in Sources */,
+				A532A3BF259EF7B700EAF4A5 /* PlayerTests.swift in Sources */,
 				A532A38C259DC29500EAF4A5 /* CardMetaDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,25 +11,25 @@ import XCTest
 final class CardMetaDataTests: XCTestCase {
     
     func testSuitDescription() {
-        XCTAssertEqual(Suit.club.description, "♣")
-        XCTAssertEqual(Suit.diamond.description, "◆")
-        XCTAssertEqual(Suit.heart.description, "♥")
-        XCTAssertEqual(Suit.spade.description, "♠")
+        XCTAssertEqual(CardMetaData.Suit.club.description, "♣")
+        XCTAssertEqual(CardMetaData.Suit.diamond.description, "◆")
+        XCTAssertEqual(CardMetaData.Suit.heart.description, "♥")
+        XCTAssertEqual(CardMetaData.Suit.spade.description, "♠")
     }
     
     func testRankDescription() {
-        XCTAssertEqual(Rank.ace.description, "A")
-        XCTAssertEqual(Rank.two.description, "2")
-        XCTAssertEqual(Rank.three.description, "3")
-        XCTAssertEqual(Rank.four.description, "4")
-        XCTAssertEqual(Rank.five.description, "5")
-        XCTAssertEqual(Rank.six.description, "6")
-        XCTAssertEqual(Rank.seven.description, "7")
-        XCTAssertEqual(Rank.eight.description, "8")
-        XCTAssertEqual(Rank.nine.description, "9")
-        XCTAssertEqual(Rank.ten.description, "10")
-        XCTAssertEqual(Rank.jack.description, "J")
-        XCTAssertEqual(Rank.queen.description, "Q")
-        XCTAssertEqual(Rank.king.description, "K")
+        XCTAssertEqual(CardMetaData.Rank.ace.description, "A")
+        XCTAssertEqual(CardMetaData.Rank.two.description, "2")
+        XCTAssertEqual(CardMetaData.Rank.three.description, "3")
+        XCTAssertEqual(CardMetaData.Rank.four.description, "4")
+        XCTAssertEqual(CardMetaData.Rank.five.description, "5")
+        XCTAssertEqual(CardMetaData.Rank.six.description, "6")
+        XCTAssertEqual(CardMetaData.Rank.seven.description, "7")
+        XCTAssertEqual(CardMetaData.Rank.eight.description, "8")
+        XCTAssertEqual(CardMetaData.Rank.nine.description, "9")
+        XCTAssertEqual(CardMetaData.Rank.ten.description, "10")
+        XCTAssertEqual(CardMetaData.Rank.jack.description, "J")
+        XCTAssertEqual(CardMetaData.Rank.queen.description, "Q")
+        XCTAssertEqual(CardMetaData.Rank.king.description, "K")
     }
 }

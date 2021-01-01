@@ -15,7 +15,7 @@ final class CardDeckTests: XCTestCase {
     //    reset 처음처럼 모든 카드를 다시 채워넣는다.
     
     private var cardDeck: CardDeck = CardDeck()
-    private let numOfCards: Int = 52
+    private let numOfCards: Int = CardMetaData.numOfCards
     
     func testCount() {
         XCTAssertEqual(cardDeck.count, numOfCards)

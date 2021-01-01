@@ -22,8 +22,8 @@ struct CardDeck {
     mutating private func generateCards() {
         originalCards = [Card]()
 
-        Suit.allCases.forEach { suit in
-            Rank.allCases.forEach { rank in
+        CardMetaData.Suit.allCases.forEach { suit in
+            CardMetaData.Rank.allCases.forEach { rank in
                 originalCards.append(Card(suit: suit, rank: rank))
             }
         }
