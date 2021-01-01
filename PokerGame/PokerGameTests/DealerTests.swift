@@ -18,20 +18,23 @@ final class DealerTests: XCTestCase {
     
     func testDistributeOne() {
         (0..<numOfCards).forEach { _ in
-            guard let _ = dealer.distributeOne() else {
-                XCTFail()
-                return
-            }
+            let _ = dealer.distributeOne()
         }
         
-        XCTAssertNil(dealer.distributeOne())
+        XCTAssertEqual(0, dealer.count)
     }
     
     func testIsEmpty() {
         XCTAssertFalse(dealer.isEmpty)
         (0..<numOfCards).forEach { _ in
-            let _ = dealer.distributeOne()
+            _ = dealer.distributeOne()
         }
         XCTAssertTrue(dealer.isEmpty)
+    }
+    
+    func testCount() {
+        XCTAssertEqual(dealer.count, numOfCards)
+        _ = dealer.distributeOne()
+        XCTAssertEqual(dealer.count, numOfCards - 1)
     }
 }

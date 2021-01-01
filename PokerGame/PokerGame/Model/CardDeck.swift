@@ -33,9 +33,7 @@ struct CardDeck {
         cards.shuffle()
     }
     
-    mutating func removeOne() -> Card? {
-        guard count != 0 else { return nil }
-        
+    mutating func removeOne() -> Card {
         return cards.remove(at: Int.random(in: (0..<count)))
     }
     

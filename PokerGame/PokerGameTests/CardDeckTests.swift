@@ -32,8 +32,8 @@ final class CardDeckTests: XCTestCase {
     func testRemoveOne() {
         var removeds = [Card: Int]()
         
-        (0..<numOfCards + 1).forEach { _ in
-            guard let removed = cardDeck.removeOne() else { return }
+        (0..<numOfCards).forEach { _ in
+            let removed = cardDeck.removeOne()
             
             if let value = removeds[removed] {
                 removeds[removed] = value + 1

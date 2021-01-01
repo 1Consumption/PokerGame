@@ -7,18 +7,32 @@
 
 import Foundation
 
-final class Dealer: Player {
-    private var cardDeck: CardDeck
+struct Dealer: Dealable {
+    var cardDeck: CardDeck
+    var cards: [Card]
+    
+    init() {
+        cardDeck = CardDeck()
+        cards = [Card]()
+    }
+}
+
+protocol Dealable: Playable {
+    var cardDeck: CardDeck { get set }
+    var count: Int { get }
+    var isEmpty: Bool { get }
+    mutating func distributeOne() -> Card
+}
+
+extension Dealable {
+    var count: Int {
+        return cardDeck.count
+    }
     var isEmpty: Bool {
         return cardDeck.count == 0
     }
     
-    override init() {
-        cardDeck = CardDeck()
-        super.init()
-    }
-    
-    func distributeOne() -> Card? {
+    mutating func distributeOne() -> Card {
         return cardDeck.removeOne()
     }
 }

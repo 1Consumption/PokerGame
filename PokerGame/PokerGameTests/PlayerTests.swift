@@ -14,11 +14,7 @@ final class PlayerTests: XCTestCase {
     private var cardDeck: CardDeck = CardDeck()
     
     func testReceiveCard() {
-        guard let card = cardDeck.removeOne() else {
-            XCTFail()
-            return
-        }
-        
+        let card = cardDeck.removeOne()
         player.receive(card)
         XCTAssertTrue(player.cards.contains(card))
     }

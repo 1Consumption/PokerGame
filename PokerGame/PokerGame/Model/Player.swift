@@ -7,14 +7,21 @@
 
 import Foundation
 
-class Player {
-    private(set) var cards: [Card]
+struct Player: Playable {
+    var cards: [Card]
     
     init() {
         cards = [Card]()
     }
-    
-    func receive(_ card: Card) {
+}
+
+protocol Playable {
+    var cards: [Card] { get set }
+    mutating func receive(_ card: Card)
+}
+
+extension Playable {
+    mutating func receive(_ card: Card) {
         cards.append(card)
     }
 }
