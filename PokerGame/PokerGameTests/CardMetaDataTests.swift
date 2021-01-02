@@ -11,12 +11,12 @@ import XCTest
 final class CardMetaDataTests: XCTestCase {
     
     func testSuitDescription() {
-        XCTAssertEqual(CardMetaData.Suit.club.description, "♣")
-        XCTAssertEqual(CardMetaData.Suit.diamond.description, "◆")
-        XCTAssertEqual(CardMetaData.Suit.heart.description, "♥")
-        XCTAssertEqual(CardMetaData.Suit.spade.description, "♠")
+        XCTAssertEqual(CardMetaData.Suit.club.description, "c")
+        XCTAssertEqual(CardMetaData.Suit.diamond.description, "d")
+        XCTAssertEqual(CardMetaData.Suit.heart.description, "h")
+        XCTAssertEqual(CardMetaData.Suit.spade.description, "s")
     }
-    
+
     func testRankDescription() {
         XCTAssertEqual(CardMetaData.Rank.ace.description, "A")
         XCTAssertEqual(CardMetaData.Rank.two.description, "2")
@@ -31,5 +31,34 @@ final class CardMetaDataTests: XCTestCase {
         XCTAssertEqual(CardMetaData.Rank.jack.description, "J")
         XCTAssertEqual(CardMetaData.Rank.queen.description, "Q")
         XCTAssertEqual(CardMetaData.Rank.king.description, "K")
+    }
+    
+    func testCardDescription() {
+        XCTAssertEqual("\(Card(suit: .club, rank: .ace))", "cA")
+    }
+    
+    func testSuitCompare() {
+        // ♠ > ♥ > ♦ > ♣
+        let spade = CardMetaData.Suit.spade
+        let heart = CardMetaData.Suit.heart
+        let diamond = CardMetaData.Suit.diamond
+        let club = CardMetaData.Suit.club
+        
+        XCTAssertGreaterThan(spade, heart)
+        XCTAssertGreaterThan(spade, diamond)
+        XCTAssertGreaterThan(spade, club)
+        
+        XCTAssertGreaterThan(heart, diamond)
+        XCTAssertGreaterThan(heart, club)
+        
+        XCTAssertGreaterThan(diamond, club)
+    }
+    
+    func testRankCompare() {
+        (0..<CardMetaData.Rank.allCases.count).forEach { index in
+            (index + 1..<CardMetaData.Rank.allCases.count).forEach {
+                XCTAssertLessThan(CardMetaData.Rank(index: index), CardMetaData.Rank(index: $0))
+            }
+        }
     }
 }

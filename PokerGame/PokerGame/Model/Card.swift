@@ -16,3 +16,16 @@ struct Card: Hashable {
         self.rank = rank
     }
 }
+
+extension Card: CustomStringConvertible {
+    var description: String {
+        return "\(suit)\(rank)"
+    }
+}
+
+extension Card: Comparable {
+    static func < (lhs: Card, rhs: Card) -> Bool {
+        guard lhs.rank != rhs.rank else { return lhs.suit < rhs.suit }
+        return lhs.rank < rhs.rank
+    }
+}

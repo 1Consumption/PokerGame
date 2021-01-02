@@ -8,20 +8,25 @@
 import Foundation
 
 struct Player: Playable {
-    var cards: [Card]
+    var hands: Handable
     
     init() {
-        cards = [Card]()
+        hands = Hands()
     }
 }
 
 protocol Playable {
-    var cards: [Card] { get set }
+    var hands: Handable { get set }
     mutating func receive(_ card: Card)
+    func handIterator(_ task: (Handable) -> Void)
 }
 
 extension Playable {
     mutating func receive(_ card: Card) {
-        cards.append(card)
+        hands.receive(card)
+    }
+    
+    func handIterator(_ task: (Handable) -> Void) {
+        task(hands)
     }
 }

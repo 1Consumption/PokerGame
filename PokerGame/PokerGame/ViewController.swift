@@ -101,14 +101,14 @@ final class ViewController: UIViewController {
         stackView.addArrangedSubview(label)
     }
     
-    private func addCardInfoStackView(into stackView: UIStackView) {
+    private func addCardInfoStackView(with cards: [Card], into stackView: UIStackView) {
         let cardInfoStackView = UIStackView(spacing: 10)
         stackView.addArrangedSubview(cardInfoStackView)
         
-        addCardStackView(into: cardInfoStackView)
+        addCardStackView(with: cards, into: cardInfoStackView)
     }
     
-    private func addCardStackView(into stackView: UIStackView) {
+    private func addCardStackView(with cards: [Card], into stackView: UIStackView) {
         let cardStackView = UIStackView(spacing: -10)
         stackView.addArrangedSubview(cardStackView)
         let winnerImageView = UIImageView()
@@ -117,14 +117,14 @@ final class ViewController: UIViewController {
         stackView.addArrangedSubview(winnerImageView)
         winnerImageViews.append(winnerImageView)
         
-        (0..<game.stud.numOfIndividualCards).forEach { _ in
-            addCardView(with: "", into: cardStackView)
-        }
+        cards.forEach { card in
+                addCardView(with: "\(card)", into: cardStackView)
+            }
     }
     
     private func addCardView(with name: String, into stackView: UIStackView) {
         let card = UIImageView()
-        card.image = #imageLiteral(resourceName: "h9")
+        card.image = UIImage(named: name)
         card.layer.cornerRadius = 7
         card.clipsToBounds = true
         stackView.addArrangedSubview(card)
@@ -134,19 +134,21 @@ final class ViewController: UIViewController {
         }
     }
     
-    private func addPlayerStackView(with title: String, into: UIStackView) {
+    private func addPlayerStackView(with title: String, and cards: [Card], into: UIStackView) {
         let playerStackView = UIStackView(axis: .vertical)
         playerContainerStackView.addArrangedSubview(playerStackView)
         addPlayerNameLabel(with: title, into: playerStackView)
-        addCardInfoStackView(into: playerStackView)
+        addCardInfoStackView(with: cards, into: playerStackView)
     }
     
     @objc private func showPlayersCard() {
         DispatchQueue.main.async { [unowned self] in
-            (0..<game.numOfPlayers.count).forEach { index in
-                addPlayerStackView(with: "Player\(index + 1)", into: playerContainerStackView)
+            var index = 0
+            game.playersIterator {
+                let name = index == game.numOfPlayers.count ? "Dealer" : "Player\(index + 1)"
+                addPlayerStackView(with: name, and: $0.cards , into: playerContainerStackView)
+                index += 1
             }
-            addPlayerStackView(with: "Dealer", into: playerContainerStackView)
         }
     }
     

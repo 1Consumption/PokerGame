@@ -52,4 +52,21 @@ final class GameTests: XCTestCase {
         
         XCTAssertFalse(game.distributeCards())
     }
+    
+    func testPlayableIterator() {
+        game = Game(stud: .seven, numOfPlayers: .four)
+        game.start()
+        
+        var count = 0
+        game.playersIterator {
+            count += $0.cards.count
+        }
+        
+        XCTAssertEqual(count, game.stud.numOfIndividualCards * (game.numOfPlayers.count + 1))
+    }
+    
+    func testIndexableInit() {
+        XCTAssertEqual(Game.Stud.init(index: 0), Game.Stud.allCases[0])
+        XCTAssertEqual(Game.Stud.init(index: 1), Game.Stud.allCases[1])
+    }
 }

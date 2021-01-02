@@ -89,6 +89,14 @@ struct Game {
         
         return true
     }
+    
+    func playersIterator(_ task: (Handable) -> Void) {
+        players.forEach {
+            task($0.hands)
+        }
+        
+        task(dealer.hands)
+    }
 }
 
 extension Notification.Name {

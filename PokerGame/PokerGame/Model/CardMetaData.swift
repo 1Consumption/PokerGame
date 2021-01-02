@@ -10,40 +10,44 @@ import Foundation
 enum CardMetaData {
     static let numOfCards: Int = 52
     
-    enum Suit: CustomStringConvertible, CaseIterable {
-        case spade
+    enum Suit: CustomStringConvertible, CaseIterable, Comparable {
         case club
-        case heart
         case diamond
+        case heart
+        case spade
         
         var description: String {
             switch self {
             case .club:
-                return "♣"
+                return "c"
             case .diamond:
-                return "◆"
+                return "d"
             case .heart:
-                return "♥"
+                return "h"
             case .spade:
-                return "♠"
+                return "s"
             }
         }
     }
-
-    enum Rank: Int, CustomStringConvertible, CaseIterable {
+    
+    enum Rank: Int, CustomStringConvertible, CaseIterable, Comparable {
+        static func < (lhs: CardMetaData.Rank, rhs: CardMetaData.Rank) -> Bool {
+            return lhs.rawValue < rhs.rawValue
+        }
+        
         case ace = 1,
-        two,
-        three,
-        four,
-        five,
-        six,
-        seven,
-        eight,
-        nine,
-        ten,
-        jack,
-        queen,
-        king
+             two,
+             three,
+             four,
+             five,
+             six,
+             seven,
+             eight,
+             nine,
+             ten,
+             jack,
+             queen,
+             king
         
         var description: String {
             switch self {
@@ -59,6 +63,10 @@ enum CardMetaData {
                 return "K"
             }
         }
+        
+        init(index: Int) {
+            self = Self.allCases[index]
+        }
     }
-
+    
 }

@@ -9,11 +9,11 @@ import Foundation
 
 struct Dealer: Dealable {
     var cardDeck: CardDeck
-    var cards: [Card]
+    var hands: Handable
     
     init() {
         cardDeck = CardDeck()
-        cards = [Card]()
+        hands = Hands()
     }
 }
 
