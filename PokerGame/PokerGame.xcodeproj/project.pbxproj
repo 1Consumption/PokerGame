@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,8 @@
 		A532A3C7259EFBE900EAF4A5 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A3C6259EFBE900EAF4A5 /* Dealer.swift */; };
 		A532A3D4259F02C400EAF4A5 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A3D3259F02C400EAF4A5 /* Game.swift */; };
 		A532A3D8259F02D500EAF4A5 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A3D7259F02D500EAF4A5 /* GameTests.swift */; };
+		A532A3DD259F994D00EAF4A5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A532A3DC259F994D00EAF4A5 /* SnapKit */; };
+		A532A3E2259FA28E00EAF4A5 /* View+convenienceInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532A3E1259FA28E00EAF4A5 /* View+convenienceInit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 		A532A3C6259EFBE900EAF4A5 /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
 		A532A3D3259F02C400EAF4A5 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		A532A3D7259F02D500EAF4A5 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
+		A532A3E1259FA28E00EAF4A5 /* View+convenienceInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+convenienceInit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A532A3DD259F994D00EAF4A5 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,7 @@
 		A532A36F259DBF0100EAF4A5 /* PokerGame */ = {
 			isa = PBXGroup;
 			children = (
+				A532A3E0259FA28500EAF4A5 /* Extension */,
 				A532A395259DC2C100EAF4A5 /* Model */,
 				A532A370259DBF0100EAF4A5 /* AppDelegate.swift */,
 				A532A372259DBF0100EAF4A5 /* SceneDelegate.swift */,
@@ -137,6 +142,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A532A3E0259FA28500EAF4A5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A532A3E1259FA28E00EAF4A5 /* View+convenienceInit.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +166,9 @@
 			dependencies = (
 			);
 			name = PokerGame;
+			packageProductDependencies = (
+				A532A3DC259F994D00EAF4A5 /* SnapKit */,
+			);
 			productName = PokerGame;
 			productReference = A532A36D259DBF0100EAF4A5 /* PokerGame.app */;
 			productType = "com.apple.product-type.application";
@@ -202,6 +218,9 @@
 				Base,
 			);
 			mainGroup = A532A364259DBF0100EAF4A5;
+			packageReferences = (
+				A532A3DB259F994D00EAF4A5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = A532A36E259DBF0100EAF4A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,6 +263,7 @@
 				A532A3A6259DDEFF00EAF4A5 /* Card.swift in Sources */,
 				A532A3C7259EFBE900EAF4A5 /* Dealer.swift in Sources */,
 				A532A3BB259EF7A200EAF4A5 /* Player.swift in Sources */,
+				A532A3E2259FA28E00EAF4A5 /* View+convenienceInit.swift in Sources */,
 				A532A373259DBF0100EAF4A5 /* SceneDelegate.swift in Sources */,
 				A532A397259DC2C700EAF4A5 /* CardMetaData.swift in Sources */,
 			);
@@ -516,6 +536,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A532A3DB259F994D00EAF4A5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A532A3DC259F994D00EAF4A5 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A532A3DB259F994D00EAF4A5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A532A365259DBF0100EAF4A5 /* Project object */;
 }

@@ -7,8 +7,23 @@
 
 import Foundation
 
+protocol Indexable: CaseIterable, Equatable {
+    var index: Int? { get }
+    init(index: Int)
+}
+
+extension Indexable {
+    var index: Int? {
+        return Self.allCases.firstIndex(of: self) as? Int
+    }
+    
+    init(index: Self.AllCases.Index) {
+        self = Self.allCases[index]
+    }
+}
+
 struct Game {
-    enum Stud {
+    enum Stud: CaseIterable, Indexable {
         case seven
         case five
         
@@ -22,7 +37,7 @@ struct Game {
         }
     }
     
-    enum NumOfPlayers: Int {
+    enum NumOfPlayers: Int, CaseIterable, Indexable {
         case one = 1,
              two,
              three,
@@ -70,6 +85,12 @@ struct Game {
             dealer.receive(card)
         }
         
+        NotificationCenter.default.post(name: .CardDistributed, object: nil)
+        
         return true
     }
+}
+
+extension Notification.Name {
+    static let CardDistributed = Notification.Name("CardDistributed")
 }

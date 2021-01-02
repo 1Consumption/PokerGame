@@ -28,6 +28,7 @@ extension Dealable {
     var count: Int {
         return cardDeck.count
     }
+    
     var isEmpty: Bool {
         return cardDeck.count == 0
     }
